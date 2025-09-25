@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Web design, Graphic design" />
+    <meta name="description" content="Web design and development" />
+    <title>Project 1</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row">
+          <div class="nav-left">
+            <a href="/" class="nav-logo-link">
+              <img src="images/logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="/" class="nav-title">DOXAH MEDIA</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="index.html">HOME</a>
+            <a href="index.html#projects">PROJECTS</a>
+            <a href="index.html#services">SERVICES</a>
+            <a href="contact.html"
+              ><button class="nav-btn">GET IN TOUCH</button></a
+            >
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#projects">PROJECTS</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="contact.html">GET IN TOUCH</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="project-head">
+      <div class="project-head-row">
+        <div class="head-text">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+            dicta.
+          </h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
+            pariatur excepturi architecto velit fuga vel assumenda itaque rerum
+            sit, officiis provident ullam numquam iure inventore magnam
+            veritatis in autem sapiente.
+          </p>
+        </div>
+        <div class="section1-img">
+          <img src="images/project1.png" alt="Project Image" class="head-img" />
+        </div>
+      </div>
+    </div>
+
+    <div class="project-desc">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
+        consectetur? Possimus nobis rerum praesentium hic, fuga deserunt
+        incidunt aspernatur maiores sequi reprehenderit! Hic numquam totam
+        incidunt quibusdam culpa doloribus officiis ratione illo. Iure
+        reprehenderit architecto ad quia quas assumenda culpa libero in itaque
+        fuga modi, placeat totam repellat eos asperiores.
+      </p>
+    </div>
+
+    <div class="big-img1">
+      <img src="images/screen1.png" alt="Project Image" class="big-img" />
+    </div>
+
+    <div class="big-img2">
+      <img src="images/screen2.png" alt="Project Image" class="big-img" />
+    </div>
+
+    <div class="slide-row">
+      <div class="slide-box scroll-preview">
+        <div class="slide-img-wrapper">
+          <img src="images/slide-img1.jpg" alt="Page view 1" />
+        </div>
+      </div>
+      <div class="slide-box scroll-preview">
+        <div class="slide-img-wrapper">
+          <img src="images/slide-img2.jpg" alt="Page view 2" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <h3>Doxah Media</h3>
+            <p>Transforming ideas into user-friendly digital experiences</p>
+          </div>
+          <div class="footer-section align-center">
+            <a href="index.html">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#services">Services</a>
+            <a href="contact.html">Get in touch</a>
+          </div>
+          <div class="footer-section align-right">
+            <a href="tel:+234 706 226 9761">
+              <i class="fa-solid fa-phone"></i>
+              <span>+234 706 226 9761</span></a
+            >
+            <a href="mailto:doxahmedia@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>doxahmedia@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Doxah Media. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      function toggleMenu(el) {
+        const menu = document.querySelector(".mobile-menu");
+        el.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+
+      document.addEventListener("click", function (event) {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".mobile-menu");
+
+        if (
+          !hamburger.contains(event.target) &&
+          !menu.contains(event.target) &&
+          hamburger.classList.contains("active")
+        ) {
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        }
+      });
+
+      function openModal(src) {
+        const modalImg = document.getElementById("modalImg");
+        const imgModal = document.getElementById("imgModal");
+        if (modalImg && imgModal) {
+          modalImg.src = src;
+          imgModal.style.display = "block";
+        }
+      }
+
+      const modalClose = document.querySelector(".modal-close");
+      if (modalClose) {
+        modalClose.onclick = function () {
+          const imgModal = document.getElementById("imgModal");
+          if (imgModal) imgModal.style.display = "none";
+        };
+      }
+
+      const imgModal = document.getElementById("imgModal");
+      if (imgModal) {
+        imgModal.onclick = function (e) {
+          if (e.target.id === "imgModal") {
+            this.style.display = "none";
+          }
+        };
+      }
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const hamburger = document.querySelector(".hamburger");
+          const menu = document.querySelector(".mobile-menu");
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        });
+      });
+
+      // Web page slide (auto-scroll screenshots)
+      document.addEventListener("DOMContentLoaded", () => {
+        const boxes = document.querySelectorAll(".slide-box.scroll-preview");
+
+        boxes.forEach((box) => {
+          const img = box.querySelector("img");
+          let tapCount = 0;
+
+          const getScrollDistance = () => {
+            return Math.max(img.scrollHeight - box.clientHeight, 0);
+          };
+
+          const startScroll = () => {
+            const distance = getScrollDistance();
+            if (distance > 0) {
+              img.style.transition = `transform ${distance * 5}ms linear`;
+              img.style.transform = `translateY(-${distance}px)`;
+            }
+          };
+
+          const resetScroll = () => {
+            img.style.transition = "transform 0.5s ease";
+            img.style.transform = "translateY(0)";
+          };
+
+          box.addEventListener("mouseenter", () => {
+            if (!isMobile()) startScroll();
+          });
+
+          box.addEventListener("mouseleave", () => {
+            if (!isMobile()) resetScroll();
+          });
+
+          box.addEventListener("click", (e) => {
+            if (isMobile()) {
+              e.preventDefault();
+              tapCount++;
+              if (tapCount === 1) {
+                startScroll();
+                const distance = getScrollDistance();
+                setTimeout(() => (tapCount = 0), distance * 5 + 500);
+              }
+            }
+          });
+        });
+
+        function isMobile() {
+          return window.matchMedia("(hover: none)").matches;
+        }
+      });
+
+      // Back to top button
+      document.addEventListener("DOMContentLoaded", () => {
+        const backToTop = document.getElementById("backToTop");
+
+        const toggleBackToTop = () => {
+          if (window.scrollY > 300) {
+            backToTop.style.display = "flex";
+          } else {
+            backToTop.style.display = "none";
+          }
+        };
+
+        // Run once on page load
+        toggleBackToTop();
+
+        // Run on scroll
+        window.addEventListener("scroll", toggleBackToTop);
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

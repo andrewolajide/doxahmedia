@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Web design, Graphic design" />
+    <meta name="description" content="Web design and development" />
+    <title>Doxah Media</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row">
+          <div class="nav-left">
+            <a href="/" class="nav-logo-link">
+              <img src="images/logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="/" class="nav-title">DOXAH MEDIA</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="index.html">HOME</a>
+            <a href="index.html#projects">PROJECTS</a>
+            <a href="index.html#services">SERVICES</a>
+            <a href="contact.html"
+              ><button class="nav-btn">GET IN TOUCH</button></a
+            >
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#projects">PROJECTS</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="contact.html">GET IN TOUCH</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <h3>Doxah Media</h3>
+            <p>Transforming ideas into user-friendly digital experiences</p>
+          </div>
+          <div class="footer-section align-center">
+            <a href="index.html">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#services">Services</a>
+            <a href="contact.html">Get in touch</a>
+          </div>
+          <div class="footer-section align-right">
+            <a href="tel:+234 706 226 9761">
+              <i class="fa-solid fa-phone"></i>
+              <span>+234 706 226 9761</span></a
+            >
+            <a href="mailto:doxahmedia@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>doxahmedia@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Doxah Media. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      function toggleMenu(el) {
+        const menu = document.querySelector(".mobile-menu");
+        el.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+
+      document.addEventListener("click", function (event) {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".mobile-menu");
+
+        if (
+          !hamburger.contains(event.target) &&
+          !menu.contains(event.target) &&
+          hamburger.classList.contains("active")
+        ) {
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        }
+      });
+
+      function openModal(src) {
+        document.getElementById("modalImg").src = src;
+        document.getElementById("imgModal").style.display = "block";
+      }
+
+      document.querySelector(".modal-close").onclick = function () {
+        document.getElementById("imgModal").style.display = "none";
+      };
+
+      document.getElementById("imgModal").onclick = function (e) {
+        if (e.target.id === "imgModal") {
+          this.style.display = "none";
+        }
+      };
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const hamburger = document.querySelector(".hamburger");
+          const menu = document.querySelector(".mobile-menu");
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        });
+      });
+
+      // Back to top button
+      document.addEventListener("DOMContentLoaded", () => {
+        const backToTop = document.getElementById("backToTop");
+
+        const toggleBackToTop = () => {
+          if (window.scrollY > 300) {
+            backToTop.style.display = "flex";
+          } else {
+            backToTop.style.display = "none";
+          }
+        };
+
+        // Run once on page load
+        toggleBackToTop();
+
+        // Run on scroll
+        window.addEventListener("scroll", toggleBackToTop);
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

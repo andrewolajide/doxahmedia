@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Web design, Graphic design" />
+    <meta name="description" content="Web design and development" />
+    <title>Doxah Media</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row">
+          <div class="nav-left">
+            <a href="/" class="nav-logo-link">
+              <img src="images/logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="/" class="nav-title">DOXAH MEDIA</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="index.html">HOME</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#services">SERVICES</a>
+            <a href="contact.html"
+              ><button class="nav-btn">GET IN TOUCH</button></a
+            >
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="contact.html">GET IN TOUCH</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <img src="images/hero-img.png" alt="Large Doxah Logo" class="hero-img" />
+      <div class="hero-text">
+        <h1>TRANSFORMING IDEAS INTO USER-FRIENDLY DIGITAL EXPERIENCES</h1>
+        <a href="#value"><button>LEARN MORE !</button></a>
+      </div>
+    </section>
+
+    <section class="value-section" id="value">
+      <img
+        src="images/value-img.jpg"
+        alt="Designers"
+        class="value-img stack-animate hover-zoom"
+      />
+      <div class="value-text stack-animate">
+        <h2>Creative Web & Design Studio</h2>
+        <p>
+          Doxah Media is a creative web and design studio, helping brands build
+          meaningful digital experiences and grow online
+        </p>
+        <p>
+          We don't just design, we build experiences that are simple, engaging
+          and effective. At Doxah Media every project is a chance to blend
+          creativity with functionality for brands that want to stand out
+        </p>
+        <a href="contact.html"><button>Get Started !</button></a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-text">
+        <p class="stack-animate">
+          <span>Hello!</span> My name is Andrew Olajide, I am a web developer
+          and graphic designer with a focus on creating modern, clean and
+          user-friendly websites. My goal is to turn ideas into engaging digital
+          experiencs
+        </p>
+        <p class="stack-animate">
+          My background in graphic design helps me add a creative touch, whether
+          its visuals, layouts or branding. I enjoy transforming concepts into
+          designs that are both visually striking and practical, helping brands
+          build a strong online presence
+        </p>
+        <h4>Creative Lead, Doxah Media</h4>
+      </div>
+      <img
+        src="images/profile-img.jpg"
+        alt="Profile Picture"
+        class="about-img stack-animate hover-zoom"
+      />
+    </section>
+
+    <section id="projects">
+      <h2 class="stack-animate">PROJECTS</h2>
+      <div class="project-row">
+        <!-- Project 1 -->
+        <div class="project-box scroll-preview" data-link="project1.html">
+          <div class="screenshot-wrapper">
+            <img
+              src="images/project1-screenshot.jpg"
+              alt="Project 1 Screenshot"
+            />
+          </div>
+          <div class="project-desc">
+            <p>Golden Chidi Personal Real Estate Website.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-box scroll-preview" data-link="project2.html">
+          <div class="screenshot-wrapper">
+            <img
+              src="images/project2-screenshot.jpg"
+              alt="Project 2 Screenshot"
+            />
+          </div>
+          <div class="project-desc">
+            <p>Folasade's Portfolio Website.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-row">
+        <div class="project-box scroll-preview" data-link="project3.html">
+          <div class="screenshot-wrapper">
+            <img
+              src="images/project3-screenshot.jpg"
+              alt="Project 3 Screenshot"
+            />
+          </div>
+          <div class="project-desc">
+            <p>Jayoni Cleaning Services Website.</p>
+          </div>
+        </div>
+        <div class="project-box stack-animate" data-project>
+          <img
+            src="images/project4.jpg"
+            alt="Graphic Design"
+            class="project-img"
+          />
+          <p>Graphic Design</p>
+          <div class="project-overlay">
+            <h3>Design Library</h3>
+            <p>Short description of the project goes here.</p>
+            <a href="graphics.html" class="btn">View Library</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="stack-animate">SERVICES</h2>
+      <div class="services-row">
+        <ul class="services-list stack-animate">
+          <li
+            data-image="images/web-img.jpg"
+            data-title="Website Design & Re-Design"
+            data-desc="We create and refresh websites that are modern, fast, and user-friendly."
+          >
+            WEBSITE DESIGN AND RE-DESIGN
+          </li>
+
+          <li
+            data-image="images/maintenance.jpg"
+            data-title="Website Maintenance & Support"
+            data-desc="Ongoing updates, security checks, and support for your website."
+          >
+            WEBSITE MAINTENANCE AND SUPPORT
+          </li>
+
+          <li
+            data-image="images/brand.jpg"
+            data-title="Brand Identity"
+            data-desc="Professional logos and branding materials to give your business a strong identity."
+          >
+            BRAND IDENTITY
+          </li>
+
+          <li
+            data-image="images/landing.jpg"
+            data-title="Landing Page Design"
+            data-desc="High-converting landing pages to showcase your products or services."
+          >
+            LANDING PAGE DESIGN
+          </li>
+
+          <li
+            data-image="images/graphic.jpg"
+            data-title="Graphic Design"
+            data-desc="Custom designs for flyers, banners, social media, and more."
+          >
+            GRAPHIC DESIGN
+          </li>
+
+          <li
+            data-image="images/uiux.jpg"
+            data-title="UI/UX Design"
+            data-desc="User-focused designs that improve experience and usability."
+          >
+            UI/UX DESIGN
+          </li>
+        </ul>
+
+        <!-- Services image with overlay -->
+        <div class="services-box">
+          <img
+            src="images/web-img.jpg"
+            alt="Service Preview"
+            id="service-img"
+          />
+          <p>Click here</p>
+          <div class="services-overlay">
+            <h3 id="service-title">Service Title</h3>
+            <p id="service-desc">
+              Short description of this service goes here.
+            </p>
+            <a href="contact.html" class="btn">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>CONTACT US</h2>
+      <div class="contact-row">
+        <div class="contact-text">
+          <span>Got a project in mind? Let's bring it to life</span>
+          <p>Fill out the form and we will contact you shortly</p>
+        </div>
+        <div class="form-wrapper">
+          <form
+            action="https://formsubmit.co/doxahmedia@gmail.com"
+            method="POST"
+            class="contact-form"
+          >
+            <!-- Honeypot anti-spam field (invisible to humans) -->
+            <input type="text" name="_honey" style="display: none" />
+
+            <!-- Redirect on success -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://goldenchidi.site/thank-you.html"
+            />
+
+            <!-- Redirect on error -->
+            <input
+              type="hidden"
+              name="_error"
+              value="https://goldenchidi.site/error.html"
+            />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Valid Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Project Details*</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="privacy" required />
+              <label for="privacy"
+                >I Agree to
+                <a href="/pages/privacy-policy.html">Privacy Policy</a></label
+              >
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <h3>Doxah Media</h3>
+            <p>Transforming ideas into user-friendly digital experiences</p>
+          </div>
+          <div class="footer-section align-center">
+            <a href="index.html">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="contact.html">Get in touch</a>
+          </div>
+          <div class="footer-section align-right">
+            <a href="tel:+234 706 226 9761">
+              <i class="fa-solid fa-phone"></i>
+              <span>+234 706 226 9761</span></a
+            >
+            <a href="mailto:doxahmedia@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>doxahmedia@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Doxah Media. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      function toggleMenu(el) {
+        const menu = document.querySelector(".mobile-menu");
+        el.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+
+      document.addEventListener("click", function (event) {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".mobile-menu");
+
+        if (
+          !hamburger.contains(event.target) &&
+          !menu.contains(event.target) &&
+          hamburger.classList.contains("active")
+        ) {
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        }
+      });
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const hamburger = document.querySelector(".hamburger");
+          const menu = document.querySelector(".mobile-menu");
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // find sections that contain stack-animate children (exclude hero & contact)
+        const sections = Array.from(
+          document.querySelectorAll("section")
+        ).filter(
+          (s) =>
+            !s.classList.contains("hero-section") &&
+            s.id !== "contact" &&
+            s.querySelectorAll(".stack-animate").length > 0
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const items = Array.from(
+                entry.target.querySelectorAll(".stack-animate")
+              );
+              const delayGap = 200; // ms between items
+
+              if (entry.isIntersecting) {
+                // when section enters viewport → add show with stagger
+                items.forEach((el, i) => {
+                  const delayMs = i * delayGap;
+                  el.style.setProperty("--delay", delayMs + "ms");
+                  setTimeout(() => el.classList.add("show"), delayMs);
+                });
+              } else {
+                // when section leaves viewport → reset (remove .show)
+                items.forEach((el) => {
+                  el.classList.remove("show");
+                  el.style.removeProperty("--delay");
+                });
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        sections.forEach((sec) => observer.observe(sec));
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectBoxes = document.querySelectorAll("[data-project]");
+
+        projectBoxes.forEach((box) => {
+          const img = box.querySelector("img");
+          const overlay = box.querySelector(".project-overlay");
+          let tapCount = 0;
+
+          // Handle taps on mobile
+          box.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+              // mobile only
+              e.preventDefault();
+              tapCount++;
+
+              if (tapCount === 1) {
+                // first tap → zoom image
+                img.style.transform = "scale(1.1)";
+              } else if (tapCount === 2) {
+                // second tap → show overlay
+                overlay.style.opacity = "1";
+                tapCount = 0; // reset taps
+              }
+            }
+          });
+
+          // Reset when out of view
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  img.style.transform = "scale(1)";
+                  overlay.style.opacity = ""; // remove inline style → back to CSS control
+                  tapCount = 0;
+                }
+              });
+            },
+            { threshold: 0.1 } // triggers when 10% is visible
+          );
+
+          observer.observe(box);
+        });
+      });
+
+      const serviceItems = document.querySelectorAll(".services-list li");
+      const serviceImg = document.getElementById("service-img");
+      const servicesOverlay = document.querySelector(".services-overlay");
+      const servicesBox = document.querySelector(".services-box");
+
+      // New: get overlay text elements
+      const serviceTitle = document.getElementById("service-title");
+      const serviceDesc = document.getElementById("service-desc");
+
+      let activeItem = null;
+      let overlayState = 0; // for mobile: 0 = normal, 1 = zoom, 2 = show overlay
+
+      serviceItems.forEach((item) => {
+        const imgSrc = item.dataset.image;
+        const title = item.dataset.title; // from HTML
+        const desc = item.dataset.desc; // from HTML
+
+        // Desktop hover preview
+        item.addEventListener("mouseenter", () => {
+          if (!isMobile()) {
+            changeServiceContent(imgSrc, title, desc);
+          }
+        });
+
+        // Click = lock image + overlay content
+        item.addEventListener("click", () => {
+          serviceItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+          changeServiceContent(imgSrc, title, desc);
+          activeItem = item;
+        });
+      });
+
+      // Mobile: click service image for overlay
+      servicesBox.addEventListener("click", () => {
+        if (isMobile()) {
+          if (overlayState === 0) {
+            servicesBox.style.transform = "scale(1.05)";
+            overlayState = 1;
+          } else if (overlayState === 1) {
+            servicesOverlay.style.opacity = 1;
+            overlayState = 2;
+          } else {
+            // reset on 3rd tap
+            servicesBox.style.transform = "scale(1)";
+            servicesOverlay.style.opacity = 0;
+            overlayState = 0;
+          }
+        }
+      });
+
+      // Utility: update image + overlay text
+      function changeServiceContent(src, title, desc) {
+        // fade out
+        serviceImg.style.opacity = 0;
+
+        setTimeout(() => {
+          serviceImg.src = src;
+
+          serviceImg.onload = () => {
+            serviceImg.style.opacity = 1;
+          };
+
+          // update overlay text
+          serviceTitle.textContent = title;
+          serviceDesc.textContent = desc;
+        }, 200); // matches the fade-out duration
+      }
+
+      // Testing new project layout
+      document
+        .querySelectorAll(".project-box.scroll-preview")
+        .forEach((box) => {
+          const img = box.querySelector("img");
+          const link = box.dataset.link;
+          let tapCount = 0;
+
+          // Desktop hover → auto scroll
+          box.addEventListener("mouseenter", () => {
+            if (!isMobile()) {
+              img.style.transition = `transform 4s linear`;
+              img.style.transform = `translateY(-${
+                img.height - box.clientHeight
+              }px)`;
+            }
+          });
+
+          box.addEventListener("mouseleave", () => {
+            if (!isMobile()) {
+              img.style.transition = "transform 0.5s ease";
+              img.style.transform = "translateY(0)";
+            }
+          });
+
+          // Mobile click → first scroll, second redirect
+          box.addEventListener("click", (e) => {
+            if (isMobile()) {
+              e.preventDefault();
+              tapCount++;
+              if (tapCount === 1) {
+                img.style.transition = "transform 4s linear";
+                img.style.transform = `translateY(-${
+                  img.height - box.clientHeight
+                }px)`;
+                setTimeout(() => {
+                  tapCount = 0;
+                }, 4500); // reset after animation
+              } else if (tapCount === 2) {
+                window.location.href = link;
+              }
+            } else {
+              // Desktop click → straight to detail page
+              window.location.href = link;
+            }
+          });
+        });
+
+      function isMobile() {
+        return window.matchMedia("(hover: none)").matches;
+      }
+
+      // Mobile carousel for services section
+      document.addEventListener("DOMContentLoaded", () => {
+        const MOBILE_Q = "(max-width: 767px)";
+        const mq = window.matchMedia(MOBILE_Q);
+        const servicesRow = document.querySelector(".services-row");
+        const servicesList = document.querySelector(".services-list");
+
+        if (!servicesRow || !servicesList) return; // safety
+
+        function buildMobileCarousel() {
+          if (document.querySelector(".mobile-carousel")) return; // already built
+
+          // create carousel elements
+          const mobileWrap = document.createElement("div");
+          mobileWrap.className = "mobile-carousel";
+          const carousel = document.createElement("div");
+          carousel.className = "carousel";
+
+          const prevBtn = document.createElement("button");
+          prevBtn.className = "carousel-prev";
+          prevBtn.type = "button";
+          prevBtn.setAttribute("aria-label", "Previous service");
+          prevBtn.textContent = "‹";
+
+          const nextBtn = document.createElement("button");
+          nextBtn.className = "carousel-next";
+          nextBtn.type = "button";
+          nextBtn.setAttribute("aria-label", "Next service");
+          nextBtn.textContent = "›";
+
+          const track = document.createElement("div");
+          track.className = "carousel-track";
+
+          // build slides from the list items
+          const items = Array.from(servicesList.querySelectorAll("li"));
+          items.forEach((li, idx) => {
+            const imgSrc = li.dataset.image || "";
+            const title =
+              li.dataset.title || li.textContent.trim() || `Service ${idx + 1}`;
+            const desc = li.dataset.desc || "";
+
+            const slide = document.createElement("article");
+            slide.className = "carousel-slide";
+            slide.setAttribute("role", "group");
+            slide.setAttribute("aria-roledescription", "slide");
+            slide.setAttribute(
+              "aria-label",
+              `${title} (${idx + 1} of ${items.length})`
+            );
+
+            // slide content: image + caption (caption shown on mobile instead of overlay)
+            slide.innerHTML = `
+        <img src="${imgSrc}" alt="${escapeHtml(title)}">
+        <div class="carousel-caption">
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(desc)}</p>
+        </div>
+      `;
+            track.appendChild(slide);
+          });
+
+          carousel.appendChild(prevBtn);
+          carousel.appendChild(track);
+          carousel.appendChild(nextBtn);
+          mobileWrap.appendChild(carousel);
+
+          // append carousel AFTER the services-row's children so it replaces left/right in flow
+          servicesRow.appendChild(mobileWrap);
+
+          // click handlers for prev/next
+          function slideWidth() {
+            // move roughly one slide width (using first slide)
+            const first = track.querySelector(".carousel-slide");
+            return first
+              ? Math.round(
+                  first.clientWidth +
+                    parseInt(getComputedStyle(track).gap || 16)
+                )
+              : Math.round(window.innerWidth * 0.86);
+          }
+
+          prevBtn.addEventListener("click", () => {
+            track.scrollBy({ left: -slideWidth(), behavior: "smooth" });
+          });
+          nextBtn.addEventListener("click", () => {
+            track.scrollBy({ left: slideWidth(), behavior: "smooth" });
+          });
+
+          // optional: tap image to toggle caption visibility (if you want)
+          track.addEventListener("click", (ev) => {
+            const sl = ev.target.closest(".carousel-slide");
+            if (!sl) return;
+            // if you want to toggle caption on tap, uncomment below:
+            // const cap = sl.querySelector('.carousel-caption');
+            // cap.style.display = cap.style.display === 'none' ? '' : 'none';
+          });
+
+          // keyboard support: left/right
+          track.tabIndex = 0;
+          track.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowRight") nextBtn.click();
+            if (e.key === "ArrowLeft") prevBtn.click();
+          });
+
+          // ensure first slide is visible when the user lands via anchor: no extra work is required,
+          // because the section itself is the anchor target. However if you want to auto-center first slide:
+          setTimeout(() => track.scrollTo({ left: 0 }), 50);
+        }
+
+        function destroyMobileCarousel() {
+          const mobile = document.querySelector(".mobile-carousel");
+          if (mobile) mobile.remove();
+        }
+
+        // small helper to escape text inserted as HTML
+        function escapeHtml(str) {
+          if (!str) return "";
+          return String(str)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
+        // initial setup depending on screen size
+        function checkAndToggle(mqEvent) {
+          if (mqEvent.matches) {
+            buildMobileCarousel();
+          } else {
+            destroyMobileCarousel();
+          }
+        }
+
+        // connect to MediaQueryList events
+        checkAndToggle(mq);
+        mq.addEventListener
+          ? mq.addEventListener("change", checkAndToggle)
+          : mq.addListener(checkAndToggle);
+      });
+
+      // Back to top button
+      document.addEventListener("DOMContentLoaded", () => {
+        const backToTop = document.getElementById("backToTop");
+
+        const toggleBackToTop = () => {
+          if (window.scrollY > 300) {
+            backToTop.style.display = "flex";
+          } else {
+            backToTop.style.display = "none";
+          }
+        };
+
+        // Run once on page load
+        toggleBackToTop();
+
+        // Run on scroll
+        window.addEventListener("scroll", toggleBackToTop);
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
