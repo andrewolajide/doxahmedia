@@ -33,10 +33,10 @@
       <div class="container">
         <div class="nav-bar-row">
           <div class="nav-left">
-            <a href="/" class="nav-logo-link">
+            <a href="index.html" class="nav-logo-link">
               <img src="images/logo.png" alt="Logo" class="nav-logo" />
             </a>
-            <a href="/" class="nav-title">DOXAH MEDIA</a>
+            <a href="index.html" class="nav-title">DOXAH MEDIA</a>
           </div>
 
           <div class="nav-right">
@@ -72,13 +72,14 @@
     </section>
 
     <section class="value-section" id="value">
+      <h2 class="mobile">Creative Web & Design Studio</h2>
       <img
         src="images/value-img.jpg"
         alt="Designers"
         class="value-img stack-animate hover-zoom"
       />
       <div class="value-text stack-animate">
-        <h2>Creative Web & Design Studio</h2>
+        <h2 class="desktop">Creative Web & Design Studio</h2>
         <p>
           Doxah Media is a creative web and design studio, helping brands build
           meaningful digital experiences and grow online
@@ -127,7 +128,11 @@
             />
           </div>
           <div class="project-desc">
-            <p>Golden Chidi Personal Real Estate Website.</p>
+            <p>
+              Golden Chidi Personal Real Estate Website.<span
+                >Double click to open</span
+              >
+            </p>
           </div>
         </div>
 
@@ -140,7 +145,9 @@
             />
           </div>
           <div class="project-desc">
-            <p>Folasade's Portfolio Website.</p>
+            <p>
+              Folasade's Portfolio Website.<span>Double click to open</span>
+            </p>
           </div>
         </div>
       </div>
@@ -153,7 +160,9 @@
             />
           </div>
           <div class="project-desc">
-            <p>Jayoni Cleaning Services Website.</p>
+            <p>
+              Jayoni Cleaning Services Website.<span>Double click to open</span>
+            </p>
           </div>
         </div>
         <div class="project-box stack-animate" data-project>
@@ -536,21 +545,28 @@
           const link = box.dataset.link;
           let tapCount = 0;
 
+          const getScroll = () => img.height - box.clientHeight;
+
+          const startScroll = () => {
+            const distance = getScroll();
+            const speed = 0.01; // adjust: lower = faster
+            const duration = distance * speed * 100; // ms
+            img.style.transition = `transform ${duration}ms linear`;
+            img.style.transform = `translateY(-${distance}px)`;
+          };
+
+          const resetScroll = () => {
+            img.style.transition = "transform 0.5s ease";
+            img.style.transform = "translateY(0)";
+          };
+
           // Desktop hover → auto scroll
           box.addEventListener("mouseenter", () => {
-            if (!isMobile()) {
-              img.style.transition = `transform 4s linear`;
-              img.style.transform = `translateY(-${
-                img.height - box.clientHeight
-              }px)`;
-            }
+            if (!isMobile()) startScroll();
           });
 
           box.addEventListener("mouseleave", () => {
-            if (!isMobile()) {
-              img.style.transition = "transform 0.5s ease";
-              img.style.transform = "translateY(0)";
-            }
+            if (!isMobile()) resetScroll();
           });
 
           // Mobile click → first scroll, second redirect
@@ -559,13 +575,7 @@
               e.preventDefault();
               tapCount++;
               if (tapCount === 1) {
-                img.style.transition = "transform 4s linear";
-                img.style.transform = `translateY(-${
-                  img.height - box.clientHeight
-                }px)`;
-                setTimeout(() => {
-                  tapCount = 0;
-                }, 4500); // reset after animation
+                startScroll();
               } else if (tapCount === 2) {
                 window.location.href = link;
               }
@@ -574,6 +584,22 @@
               window.location.href = link;
             }
           });
+
+          // Mobile reset when box leaves viewport
+          if (isMobile()) {
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (!entry.isIntersecting) {
+                    resetScroll();
+                    tapCount = 0; // reset tap count too
+                  }
+                });
+              },
+              { threshold: 0 } // triggers immediately when leaving
+            );
+            observer.observe(box);
+          }
         });
 
       function isMobile() {

@@ -33,10 +33,10 @@
       <div class="container">
         <div class="nav-bar-row">
           <div class="nav-left">
-            <a href="/" class="nav-logo-link">
+            <a href="index.html" class="nav-logo-link">
               <img src="images/logo.png" alt="Logo" class="nav-logo" />
             </a>
-            <a href="/" class="nav-title">DOXAH MEDIA</a>
+            <a href="index.html" class="nav-title">DOXAH MEDIA</a>
           </div>
 
           <div class="nav-right">
@@ -211,15 +211,15 @@
         boxes.forEach((box) => {
           const img = box.querySelector("img");
           let tapCount = 0;
+          const speed = 3; // adjust for scroll speed (lower = faster)
 
-          const getScrollDistance = () => {
-            return Math.max(img.scrollHeight - box.clientHeight, 0);
-          };
+          const getScrollDistance = () =>
+            Math.max(img.scrollHeight - box.clientHeight, 0);
 
           const startScroll = () => {
             const distance = getScrollDistance();
             if (distance > 0) {
-              img.style.transition = `transform ${distance * 5}ms linear`;
+              img.style.transition = `transform ${distance * speed}ms linear`;
               img.style.transform = `translateY(-${distance}px)`;
             }
           };
@@ -229,25 +229,40 @@
             img.style.transform = "translateY(0)";
           };
 
+          // Desktop hover
           box.addEventListener("mouseenter", () => {
             if (!isMobile()) startScroll();
           });
-
           box.addEventListener("mouseleave", () => {
             if (!isMobile()) resetScroll();
           });
 
+          // Mobile tap to start scroll
           box.addEventListener("click", (e) => {
             if (isMobile()) {
               e.preventDefault();
               tapCount++;
               if (tapCount === 1) {
                 startScroll();
-                const distance = getScrollDistance();
-                setTimeout(() => (tapCount = 0), distance * 5 + 500);
               }
             }
           });
+
+          // Mobile reset when leaving viewport
+          if (isMobile()) {
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (!entry.isIntersecting) {
+                    resetScroll();
+                    tapCount = 0; // reset so user can tap again
+                  }
+                });
+              },
+              { threshold: 0 }
+            );
+            observer.observe(box);
+          }
         });
 
         function isMobile() {

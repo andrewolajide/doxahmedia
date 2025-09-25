@@ -197,6 +197,7 @@ body {
 
 .hero-section button {
     background: #FF9A00;
+    margin-top: 1rem;
     border: none;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
@@ -223,6 +224,14 @@ body {
     gap: 4rem;
     padding: 3rem 4rem;
 }
+
+.value-section .mobile {
+    display: none;
+  }
+
+  .value-section .desktop {
+    display: block;
+  }
 
 .value-img {
     height: 500px;
@@ -358,8 +367,15 @@ body {
     color: white;
     text-align: center;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     margin: 0;
+}
+
+.project-box span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: block;
+    margin-top: 0.5rem;
 }
 
 #services {
@@ -1018,6 +1034,14 @@ background: white;
     padding: 3rem 2rem;
   }
 
+  .value-section .mobile {
+    display: block;
+  }
+
+  .value-section .desktop {
+    display: none;
+  }
+
   .value-section, .about, .services-row {
     flex-direction: column;
     text-align: center;
@@ -1032,6 +1056,12 @@ background: white;
   }
 
   .value-text {
+    text-align: left;
+  }
+
+  .value-section h2 {
+    font-size: 2rem;
+    line-height: 1.2;
     text-align: left;
   }
 
@@ -1069,6 +1099,7 @@ background: white;
     width: 100%;
     height: 400px;
     min-height: 400px;
+    object-position: top;
   }
 
   #projects {
@@ -1277,7 +1308,6 @@ background: white;
   }
   .carousel-prev { left: 0.6rem; }
   .carousel-next { right: 0.6rem; }
-}
 
 .project-head {
     padding: 3rem 2rem;
@@ -1370,5 +1400,5 @@ background: white;
     .mobile-carousel .carousel-slide img { height: 56vw; }
     .carousel-prev, .carousel-next { width: 36px; height: 36px; font-size: 1.1rem; }
   }
-
+}
 
