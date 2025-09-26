@@ -265,6 +265,19 @@
           }
         });
 
+        // 🔹 NEW: Mobile reset when clicking outside
+        document.addEventListener("click", (e) => {
+          if (isMobile()) {
+            boxes.forEach((box) => {
+              const img = box.querySelector("img");
+              if (!box.contains(e.target)) {
+                img.style.transition = "transform 0.5s ease";
+                img.style.transform = "translateY(0)";
+              }
+            });
+          }
+        });
+
         function isMobile() {
           return window.matchMedia("(hover: none)").matches;
         }

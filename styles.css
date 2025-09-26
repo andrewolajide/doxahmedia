@@ -376,6 +376,7 @@ body {
     font-weight: 400;
     display: block;
     margin-top: 0.5rem;
+    animation: pop 1.5s ease-in-out infinite;
 }
 
 #services {
@@ -998,6 +999,7 @@ background: white;
 
 .nav-bar-row {
     padding: 1rem 2rem;
+    border-bottom: 2px solid white;
   }
 
 .nav-bar-row a {
@@ -1015,6 +1017,7 @@ background: white;
 
 .hero-section {
     min-height: 500px;
+    border-bottom: 2px solid white;
   }
 
   .hero-img {
@@ -1032,6 +1035,7 @@ background: white;
   .value-section {
     gap: 3rem;
     padding: 3rem 2rem;
+    border-bottom: 2px solid white;
   }
 
   .value-section .mobile {
@@ -1084,6 +1088,7 @@ background: white;
     flex-direction: column-reverse;
     gap: 3rem;
     padding: 3rem 2rem;
+    border-bottom: 2px solid white;
   }
 
   .about-text p {
@@ -1104,6 +1109,7 @@ background: white;
 
   #projects {
     padding: 3rem 2rem;
+    border-bottom: 2px solid white;
   }
 
   #projects h2 {
@@ -1119,6 +1125,7 @@ background: white;
   #services {
     height: auto;
     padding: 3rem 2rem;
+    border-bottom: 2px solid #FF9A00;
   }
 
 #services h2 {
@@ -1274,7 +1281,7 @@ background: white;
 
   .mobile-carousel .carousel-caption h3 {
     margin: 0 0 .25rem 0;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     color: #FF9A00;
   }
 
@@ -1291,13 +1298,14 @@ background: white;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: none;
     background: #FF9A00;
     color: #111;
-    font-size: 1.35rem;
+    font-size: 2rem;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1349,18 +1357,20 @@ background: white;
 
 .big-img1 {
     height: 500px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 2rem;
     justify-content: center;
+    justify-self: center;
     display: flex;
     padding: 3rem 0;
 }
 
 .big-img2 {
     height: 500px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 2rem;
     justify-content: center;
+    justify-self: center;
     display: flex;
     background-color: #00E9DF;
 }

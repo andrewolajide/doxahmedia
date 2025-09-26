@@ -538,9 +538,10 @@
       }
 
       // Testing new project layout
-      document
-        .querySelectorAll(".project-box.scroll-preview")
-        .forEach((box) => {
+      document.addEventListener("DOMContentLoaded", () => {
+        const boxes = document.querySelectorAll(".project-box.scroll-preview");
+
+        boxes.forEach((box) => {
           const img = box.querySelector("img");
           const link = box.dataset.link;
           let tapCount = 0;
@@ -602,9 +603,23 @@
           }
         });
 
-      function isMobile() {
-        return window.matchMedia("(hover: none)").matches;
-      }
+        // 🔹 NEW: Mobile reset when clicking outside any scroll box
+        document.addEventListener("click", (e) => {
+          if (isMobile()) {
+            boxes.forEach((box) => {
+              const img = box.querySelector("img");
+              if (!box.contains(e.target)) {
+                img.style.transition = "transform 0.5s ease";
+                img.style.transform = "translateY(0)";
+              }
+            });
+          }
+        });
+
+        function isMobile() {
+          return window.matchMedia("(hover: none)").matches;
+        }
+      });
 
       // Mobile carousel for services section
       document.addEventListener("DOMContentLoaded", () => {
@@ -745,6 +760,23 @@
           ? mq.addEventListener("change", checkAndToggle)
           : mq.addListener(checkAndToggle);
       });
+
+      // To make services boxes in mobile view clickable
+      document.querySelectorAll(".services-box").forEach((box) => {
+        box.addEventListener("click", (e) => {
+          if (isMobile()) {
+            e.preventDefault();
+            // 🔹 Redirect directly to contact page
+            window.location.href = "contact.html"; // change to your contact page path
+          } else {
+            // keep your desktop behavior here (if any)
+          }
+        });
+      });
+
+      function isMobile() {
+        return window.matchMedia("(hover: none)").matches;
+      }
 
       // Back to top button
       document.addEventListener("DOMContentLoaded", () => {
