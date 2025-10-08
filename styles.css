@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   background-color: #121111;
   color: white;
   line-height: 1.6;
@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1rem 4rem;
+    border-bottom: 1px solid white;
 }
 
 .nav-left {
@@ -59,7 +60,7 @@ body {
     border: none;
     font-weight: 500;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     cursor: pointer;
 }
 
@@ -145,7 +146,7 @@ body {
 }
 
 .mobile-menu li a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   display: block;
   padding: 1rem;
   color: black;
@@ -199,7 +200,7 @@ body {
     background: #FF9A00;
     margin-top: 1rem;
     border: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     padding: 7px 10px;
@@ -223,6 +224,7 @@ body {
     align-items: center;
     gap: 4rem;
     padding: 3rem 4rem;
+    border-radius: 0 0 50px 50px;
 }
 
 .value-section .mobile {
@@ -259,7 +261,7 @@ body {
 .value-text button {
     background: #FF9A00;
     border: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     padding: 7px 10px;
@@ -323,6 +325,7 @@ body {
 #projects {
     background: #333333;
     padding: 3rem 4rem;
+    border-radius: 0 0 50px 50px;
 }
 
 #projects h2 {
@@ -343,7 +346,7 @@ body {
     position: relative;
     border-radius: 10px;
     width: 500px;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
     margin-bottom: 2rem;
     border: 20px solid white;
@@ -382,6 +385,7 @@ body {
 #services {
     height: 750px;
     padding: 3rem 4rem;
+    border-bottom: 2px solid #FF9A00;
 }
 
 #services h2 {
@@ -402,7 +406,7 @@ body {
 
 
 .services-list li {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   padding: 0.8rem 0;  
   cursor: pointer; /* 👈 makes the pointer cursor */
 }
@@ -482,7 +486,7 @@ body {
   margin-bottom: 4rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
 }
 
 .form-row {
@@ -510,7 +514,7 @@ body {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: 1rem;
   padding: 0.6rem;
   border: 1px solid white;
@@ -583,7 +587,7 @@ textarea {
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   display: inline-block;
   margin-left: 0;      /* stick to left */
 }
@@ -937,7 +941,8 @@ background: white;
     background-color: #333333;
     height: 730px;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0 50px 50px;
     justify-content: center;
     display: flex;
     padding: 3rem 0;
@@ -946,7 +951,8 @@ background: white;
 .big-img2 {
     height: 730px;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0 50px 50px;
     justify-content: center;
     display: flex;
 }
@@ -961,13 +967,14 @@ background: white;
     max-width: 100%;
     width: 100%;
     overflow: hidden;
+    border-radius: 50px 50px 0 0;
 }
 
 .slide-row {
     padding: 3rem 6rem;
     display: flex;
     gap: 5rem;
-    background-color: white;
+    background-color: #333;
 }
 
 .slide-box {
@@ -1036,6 +1043,7 @@ background: white;
     gap: 3rem;
     padding: 3rem 2rem;
     border-bottom: 2px solid white;
+    border-radius: 0;
   }
 
   .value-section .mobile {
@@ -1110,6 +1118,7 @@ background: white;
   #projects {
     padding: 3rem 2rem;
     border-bottom: 2px solid white;
+    border-radius: 0;
   }
 
   #projects h2 {
@@ -1363,6 +1372,7 @@ background: white;
     justify-self: center;
     display: flex;
     padding: 3rem 0;
+    border-radius: 0;
 }
 
 .big-img2 {
@@ -1372,7 +1382,7 @@ background: white;
     justify-content: center;
     justify-self: center;
     display: flex;
-    background-color: #00E9DF;
+    border-radius: 0;
 }
 
 .big-img {
@@ -1386,6 +1396,7 @@ background: white;
     width: 100%;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .slide-row {
